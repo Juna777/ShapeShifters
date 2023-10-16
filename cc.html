@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShapeShifters</title>
+    <link rel="icon" type="image" href="img/logo.png">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body style="background-color: #9fe0dd;">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="" width="70px" height="70px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"><b>Home</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"><b>About</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html"><b>Shop</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cc.html"><b>Calorie Counter</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html"><b>Contact Us</b></a>
+          </li>
+          <li>
+            <a class="nav-link" href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </svg>
+              <p class="d-inline-block"  id="cartlength"></p>
+             </a>
+          </li>
+          </ul>
+            <h6><a href="login.html">Log-in</a></h6>
+            <h6><a href="signup.html">Sign-up</a></h6>
+            
+          </div>
+    </div>
+</nav>
+      <br><br><br>
+<center>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4 font-weight-bolder">Calorie Counter</h1>
+        <p class=" container bg-light p-4 font-weight-bolder" style="color: #125752;">A calorie counter is a simple tool that tracks the number of calories you consume. It helps you manage your weight, make informed food choices, and maintain a balanced diet for a healthier lifestyle.</p>
+        <div class="card">
+            <div class="card-body">
+                <form class="form-inline">
+                    <div class="form-group mx-2">
+                        <label for="food-item" class="mr-2">Food Item:</label>
+                        <input type="text" class="form-control" id="food-item" placeholder="Enter food item" required>
+                    </div>
+                    <div class="form-group mx-2">
+                        <label for="calories" class="mr-2">Calories:</label>
+                        <input type="number" class="form-control" id="calories" placeholder="Calories" disabled>
+                    </div>
+                    <button type="button" class="btn btn-dark mx-2" id="add-btn">Add Item</button>
+                </form>
+            </div>
+        </div>
+        <ul id="calorie-list" class="list-group mt-4"></ul>
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Total Calories</h5>
+                <p id="total-calories" class="card-text">0</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <style>
+        body {
+            background-image: url(calorie.avif);
+            background-position: center;
+            height: 100vh;
+            width:100% ;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .card {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let totalCalories = 0;
+
+            $('#food-item').on('input', function() {
+                const query = $(this).val().toLowerCase();
+                const calorieData = {
+                    'apple': 52,
+                    'banana': 89,
+                    'chicken breast': 165,
+                    'spaghetti': 200,
+                    'burger': 150,
+                    'pizza': 100,
+                    'rice': 50,
+                    'fish': 40,
+                    'pork': 100,
+                    'chicken': 90
+                    
+                };
+
+                const calories = calorieData[query];
+                if (calories) {
+                    $('#calories').val(calories);
+                } else {
+                    $('#calories').val('Calories not found');
+                }
+            });
+
+            $('#add-btn').click(function() {
+                const calories = parseInt($('#calories').val());
+                if (!isNaN(calories)) {
+                    totalCalories += calories;
+                    $('#total-calories').text(totalCalories);
+                    
+                    const foodItem = $('#food-item').val();
+                    $('#calorie-list').append('<li class="list-group-item">' + foodItem + ': ' + calories + ' calories</li>');
+                }
+            });
+        });
+    </script>
+    <br><br><br><br>
+    </center>
+         <footer class=" text-black pt-5 pb-4">
+          <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+              <div class="col-md-3 col-lg col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-">Shapeshifters.com</h5>
+                <p>If you have any questions, feedback, or suggestions, we'd love to hear from you. Get in touch with us </p>
+              </div>
+        
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto m-3">
+                  <h5 class="text-uppercase mb-4 font-weight-bold text-black">Contact</h5>
+                  <p>
+                    <i class="fas fa-home" style="margin-right: 8px;"></i> Mambaling, Cebu City, Philippines
+                  </p>
+                  <p>
+                    <i class="fas fa-envelope" style="margin-right: 8px;"></i> ShapeShifters@gmail.com
+                  </p>
+                  <p>
+                    <i class="fas fa-phone" style="margin-right: 8px;"></i> +639163711952
+                  </p>
+                  <p>
+                    <i class="fas fa-print" style="margin-right: 8px;"></i> +112-43554
+                  </p>
+                </div>
+                
+              <div class="col-md-4 col-lg col-xl-4 mt-3">
+                <h5 class="text-uppercase mb-4 font-weight-bold text-black">Follow us</h5>
+                <ul>
+                  <li class="list-inline-item">
+                    <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-facebook"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-instagram"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-youtube"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-tiktok"></i></a>
+                  </li>
+                </ul>
+            </div>
+            <hr class="mb-4">
+            <div class="text-center text-black">
+              <p> © 2023 Shapeshifters.com. All rights reserved.</p>
+            </div>
+        
+          </div>
+        
+        </footer>
+</body>
+</html>

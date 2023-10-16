@@ -1,0 +1,58 @@
+
+.navbar {
+    background-color: #bed3d2;
+    display: flex;
+    position: fixed;
+    width: 100%;
+  }
+  
+  .navbar a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .navbar a:hover {
+    background-color: #63ada8;
+    color: black;
+  }
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+        padding: 30px;
+        padding-bottom: 30px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      }
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.payment-option-details {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+footer{
+    background-color: #63ada8;
+}

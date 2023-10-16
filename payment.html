@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShapeShifters</title>
+  <link rel="icon" type="image" href="img/logo.png">
+  <link rel="stylesheet" href="payment.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body style="background-color: #9fe0dd;" <br><br><br>
+  <center>
+
+    <h3>Total Payment:</h3>
+    <p id="totalPrice"></p>
+    <br><br><br>
+    <div class="container bg-white">
+      <form id="payment-form">
+        <div class="personal-details">
+          <h2>Personal Information</h2>
+          <br>
+          <div class="form-group">
+            <label class="fw-bold" for="fullName ">Full Name</label>
+            <input class="fw-bold" type="text" id="fullName" name="fullName" required>
+          </div>
+          <div class="form-group">
+            <label for="email" class="fw-bold" style="margin-left: 40px;">Email</label>
+            <input class="fw-bold" type="email" id="email" name="email" required>
+          </div>
+        </div>
+        <div class="payment-options">
+          <h2>Payment Options</h2>
+          <div class="form-group">
+            <label for="paymentMethod"></label>
+            <select id="paymentMethod" name="paymentMethod" required>
+              <option value="" disabled selected>Select Payment Method</option>
+              <option value="gcash">Gcash</option>
+              <option value="paymaya">Pay Maya</option>
+              <option value="bankDebit">Bank Debit</option>
+              <option value="creditCard">Credit Card</option>
+            </select>
+          </div>
+          <div id="gcash" class="payment-option-details hidden">
+            <h3 class="fw-bold">Gcash Details</h3>
+            <p class="fw-bold">Pay to: 09123456789</p>
+          </div>
+          <div id="paymaya" class="payment-option-details hidden">
+            <h3 class="fw-bold">Pay Maya Details</h3>
+            <p class="fw-bold">Pay to: 09123456789</p>
+          </div>
+          <div class="fw-bold" id="bankDebit" class="payment-option-details hidden">
+            <h3 class="fw-bold">Bank Debit Details</h3>
+            <p class="fw-bold">Account Number: 1234567890</p>
+          </div>
+          <div id="creditCard" class="payment-option-details hidden">
+            <h3 class="fw-bold">Credit Card Details</h3>
+            <div class="form-group">
+              <label class="fw-bold" for="cardNumber">Card Number</label>
+              <input type="text" id="cardNumber" class="fw-bold" name="cardNumber">
+            </div>
+            <div class="form-group" style="margin-left: 10px;">
+              <label class="fw-bold" for="expiryDate">Expiry Date</label>
+              <input type="text" id="expiryDate" class="fw-bold" name="expiryDate" placeholder="MM/YYYY">
+            </div>
+            <div class="form-group" style="margin-left: 40px;">
+              <label class="fw-bold" for="cvv">CVV</label>
+              <input type="text" id="cvv" name="cvv" maxlength="3" style="width: 220px;margin-left: 20px;">
+            </div>
+          </div>
+          <button type="button" onclick="co()" class="btn-lg fw-bold"
+            style="background-color: #9fe0dd;border-radius: 5px;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Make Payment
+          </button>
+        </div>
+    </div>
+    <br>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+
+            </button>
+          </div>
+          <div class="modal-body" id="modal-body">
+            <h1>Your order is complete, time to celebrate!🎊</h1>
+          </div>
+          <div class="modal-footer">
+            <a href="shop.html"><button type="button" class="btn btn-secondary"
+                data-bs-dismiss="modal">Close</button></a>
+          </div>
+        </div>
+      </div>
+      </form>
+    </div>
+
+  </center>
+
+  <script src="js/payment.js"></script>
+
+</body>
+
+</html>
