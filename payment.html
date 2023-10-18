@@ -2,110 +2,242 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ShapeShifters</title>
-  <link rel="icon" type="image" href="img/logo.png">
-  <link rel="stylesheet" href="payment.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-  </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShapeShifters</title>
+    <link rel="icon" type="image" href="img/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <style>
+ .navbar {
+    background-color: #bed3d2;
+    display: flex;
+    position: fixed;
+    width: 100%;
+  }
+  
+  .navbar a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .navbar a:hover {
+    background-color: #63ada8;
+    color: black;
+  }
+
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #63ada8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+}
+
+.left-side {
+    width: 50%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.right-side {
+    width: 50%;
+    padding: 20px;
+
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.card {
+    background-color: silver;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.payment-option-details {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#submitPayment {
+    background-color: #031211;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px 30px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#submitPayment:hover {
+    background-color: #4d8b80;
+}
+    </style>
 </head>
 
-<body style="background-color: #9fe0dd;" <br><br><br>
-  <center>
-
-    <h3>Total Payment:</h3>
-    <p id="totalPrice"></p>
-    <br><br><br>
-    <div class="container bg-white">
-      <form id="payment-form">
-        <div class="personal-details">
-          <h2>Personal Information</h2>
-          <br>
-          <div class="form-group">
-            <label class="fw-bold" for="fullName ">Full Name</label>
-            <input class="fw-bold" type="text" id="fullName" name="fullName" required>
-          </div>
-          <div class="form-group">
-            <label for="email" class="fw-bold" style="margin-left: 40px;">Email</label>
-            <input class="fw-bold" type="email" id="email" name="email" required>
-          </div>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <form id="personal-details-form">
+                <h4>Personal Information and Shipping Address</h4>
+                <br>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="zipCode">ZIP Code</label>
+                    <input type="text" id="zipCode" name="zipCode" required>
+                </div>
+            </form>
         </div>
-        <div class="payment-options">
-          <h2>Payment Options</h2>
-          <div class="form-group">
-            <label for="paymentMethod"></label>
-            <select id="paymentMethod" name="paymentMethod" required>
-              <option value="" disabled selected>Select Payment Method</option>
-              <option value="gcash">Gcash</option>
-              <option value="paymaya">Pay Maya</option>
-              <option value="bankDebit">Bank Debit</option>
-              <option value="creditCard">Credit Card</option>
-            </select>
-          </div>
-          <div id="gcash" class="payment-option-details hidden">
-            <h3 class="fw-bold">Gcash Details</h3>
-            <p class="fw-bold">Pay to: 09123456789</p>
-          </div>
-          <div id="paymaya" class="payment-option-details hidden">
-            <h3 class="fw-bold">Pay Maya Details</h3>
-            <p class="fw-bold">Pay to: 09123456789</p>
-          </div>
-          <div class="fw-bold" id="bankDebit" class="payment-option-details hidden">
-            <h3 class="fw-bold">Bank Debit Details</h3>
-            <p class="fw-bold">Account Number: 1234567890</p>
-          </div>
-          <div id="creditCard" class="payment-option-details hidden">
-            <h3 class="fw-bold">Credit Card Details</h3>
-            <div class="form-group">
-              <label class="fw-bold" for="cardNumber">Card Number</label>
-              <input type="text" id="cardNumber" class="fw-bold" name="cardNumber">
+        <div class="right-side">
+            <div class="card payment-card">
+                <div class="card-body">
+                    <h2>Payment Options</h2>
+                    <p id="totalPrice"></p>
+                    <div class="form-group">
+                        <label for="paymentMethod">Select Payment Method</label>
+                        <select id="paymentMethod" name="paymentMethod" required>
+                            <option value="" disabled selected>Select Payment Method</option>
+                            <option value="gcash">Gcash</option>
+                            <option value="paymaya">Pay Maya</option>
+                            <option value="bankDebit">Bank Debit</option>
+                            <option value="creditCard">Credit Card</option>
+                        </select>
+                    </div>
+                    <div id="gcash" class="payment-option-details hidden">
+                        <div class="form-group">
+                            <label for="gcashNumber">Gcash Number</label>
+                            <input type="text" id="gcashNumber" name="gcashNumber">
+                        </div>
+                    </div>
+                    <div id="paymaya" class="payment-option-details hidden">
+                        <div class="form-group">
+                            <label for="paymayaNumber">PayMaya Number</label>
+                            <input type="text" id="paymayaNumber" name="paymayaNumber">
+                        </div>
+                        <div class="form-group">
+                            <label for="paymayaExpiryDate">Expiry Date</label>
+                            <input type="text" id="paymayaExpiryDate" name="paymayaExpiryDate" placeholder="MM/YYYY">
+                        </div>
+                        <div class="form-group">
+                            <label for="paymayaCvv">CVV</label>
+                            <input type="text" id="paymayaCvv" name="paymayaCvv" maxlength="3">
+                        </div>
+                    </div>
+                    <div id="bankDebit" class="payment-option-details hidden">
+                        <div class="form-group">
+                            <label for="debitCardNumber">Card Number</label>
+                            <input type="text" id="debitCardNumber" name="debitCardNumber">
+                        </div>
+                        <div class="form-group">
+                            <label for="debitExpiryDate">Expiry Date</label>
+                            <input type="text" id="debitExpiryDate" name="debitExpiryDate" placeholder="MM/YYYY">
+                        </div>
+                        <div class="form-group">
+                            <label for="debitCVV">CVV</label>
+                            <input type="text" id="debitCVV" name="debitCVV" maxlength="3">
+                        </div>
+                        <div class="form-group">
+                            <label for="debitCardName">Name on Card</label>
+                            <input type="text" id="debitCardName" name="debitCardName">
+                        </div>
+                    </div>
+                    <div id="creditCard" class="payment-option-details hidden">
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" id="cardNumber" name="cardNumber">
+                        </div>
+                        <div class="form-group">
+                            <label for="expiryDate">Expiry Date</label>
+                            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YYYY">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" maxlength="3">
+                        </div>
+                    </div>
+                                <button type="button" class="btn-lg btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Make Payment
+                                </button>
+                                <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel" style="background-color: #9fe0dd;color: #4d8b80">Payment Successful!</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Thank you for your payment. Your order has been processed successfully.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+
+                   
+                        </div>
+                </div>
             </div>
-            <div class="form-group" style="margin-left: 10px;">
-              <label class="fw-bold" for="expiryDate">Expiry Date</label>
-              <input type="text" id="expiryDate" class="fw-bold" name="expiryDate" placeholder="MM/YYYY">
-            </div>
-            <div class="form-group" style="margin-left: 40px;">
-              <label class="fw-bold" for="cvv">CVV</label>
-              <input type="text" id="cvv" name="cvv" maxlength="3" style="width: 220px;margin-left: 20px;">
-            </div>
-          </div>
-          <button type="button" onclick="co()" class="btn-lg fw-bold"
-            style="background-color: #9fe0dd;border-radius: 5px;" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Make Payment
-          </button>
         </div>
-    </div>
-    <br>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
 
-            </button>
-          </div>
-          <div class="modal-body" id="modal-body">
-            <h1>Your order is complete, time to celebrate!🎊</h1>
-          </div>
-          <div class="modal-footer">
-            <a href="shop.html"><button type="button" class="btn btn-secondary"
-                data-bs-dismiss="modal">Close</button></a>
-          </div>
-        </div>
-      </div>
-      </form>
-    </div>
-
-  </center>
-
-  <script src="js/payment.js"></script>
-
+    <script src="js/payment.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/shop.js"></script>
 </body>
 
 </html>

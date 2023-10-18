@@ -1,9 +1,9 @@
-const url = `https://github.com/Juna777/ShapeShifters/blob/main/js/api.js`;
+const url = `http://127.0.0.1:5500/js/api.js`;
 
 fetch(url)
-.then( response => response.json()) //object
+.then( response => response.json())
 .then( result => {
-    //console.log(result) //array
+
 
     let a = [];
     a = result;
@@ -17,7 +17,7 @@ fetch(url)
 
             show += 
             `<div class="card d-inline-flex" style="width: 18.5rem;margin:3px;margin-top:10px;
-            border-radius: 15px; box-shadow: 0px 2px 3px rgb(55, 143, 146);">
+            border-radius: 15px; box-shadow: 0px 5px 10px rgb(55, 143, 146);">
                 <img src="${item.img}" id = "img${item.id}" class="card-img-top" alt="...">
                 <div class="card-body">
                 <p class="card-text"  id="p${item.id}" hidden>${item.id}</p>
@@ -27,35 +27,36 @@ fetch(url)
                 <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target=#m${item.id}>Buy</a>
 
                 <!-- Modal -->
-                <div class="modal fade" id="m${item.id}" tabindex="-1" aria-labelledby="m${item.id}Label" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="m${item.id}Label">${item.product}</h1>
-                    </div>
-                    <div class="modal-body">
-                        <img src="${item.img}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <p class="card-text"  id="p${item.id}" hidden>${item.id}</p>
-                        <h6 class="card-title" id="dre${item.id}" style="color: #125752;">${item.description}</h6>
-                        <br>
-                        <h4 class="fw-bolder"  id="pri${item.id}">${item.price}</h4>
-                        </div>
+
+                <div class="card modal fade" id="m${item.id}" tabindex="-1" aria-labelledby="m${item.id}Label" aria-hidden="true">
+                <div class="row g-0  modal-dialog">
+                  <div class="modal-content  ">
+                  <div style="border-radius: 5px; box-shadow: 10px 10px 20px rgb(55, 143, 146);">
+                  <img src="${item.img}" width="490px" height="300px" style="margin-top:5px;border-radius: 5px;">
+                  <p class="modal-title fs-5" id="m${item.id}Label">${item.product}</p>
+                  </div>
+                  </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                    <p class="card-text"  id="p${item.id}" hidden>${item.id}</p>
+                    <h6 class="card-title" id="dre${item.id}" style="color: #125752;">${item.description}</h6>
+                    <br>
+                    <h4 class="fw-bolder" style="color: #125752;" id="pri${item.id}">${item.price}</h4>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-dark" data-bs-dismiss="modal" id=${item.id} onclick="addOrder(${item.id})">Add to Cart</button>
                     </div>
-                    </div>
+                  </div>
                 </div>
-                </div>
-
-                </div>
-            </div>
+              </div>
+              </div>
           `;
             
         });
         div_area.innerHTML = show ;
+       
 })
 
 function addOrder(id){
@@ -65,7 +66,6 @@ function addOrder(id){
         location.replace("login.html");
     }else{
         let array = localStorage.getItem("order");
-        //console.log(array);
         
         if (array == null){
             let orderlist = [];
@@ -101,7 +101,7 @@ function addOrder(id){
 
 function cartlength(){
 
-    let cart = JSON.parse(localStorage.getItem("order")); //array
+    let cart = JSON.parse(localStorage.getItem("order")); 
     if (cart == null){
         let cart_l = document.getElementById("cartlength");
         cart_l.innerText = "";

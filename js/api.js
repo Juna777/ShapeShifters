@@ -3,28 +3,28 @@
         "id":"1",
         "product": "SHAPESHIFTER Grape", 
         "price": "₱770.00",
-        "description":"Our Shape Shifter is an industry leading 2 in 1, fat burner and pre workout! This unique and natural blend combines some of the most effective fat burning ingredients available, with no artificial colours, flavours or preservatives! <br> <br>Shape Shifter contains an innovative blend of Lean GBB™, Vaso6™, Cocoabuterol™, and Cell Charge™ with Acetyl L-Carnitine, L-Carnitine Tartrate, Grains of Paradise, L-Tyrosine, Citrus Aurantium and Natural Caffeine to activate the body's thermogenic fat-burning activity while increasing mental drive, clarity and focus. ",
+        "description":"Our ShapeShifter is an industry leading 2 in 1, fat burner and pre workout! This unique and natural blend combines some of the most effective fat burning ingredients available, with no artificial colours, flavours or preservatives! <br> <br>Shape Shifter contains an innovative blend of Lean GBB™, Vaso6™, Cocoabuterol™, and Cell Charge™ with Acetyl L-Carnitine, L-Carnitine Tartrate, Grains of Paradise, L-Tyrosine, Citrus Aurantium and Natural Caffeine to activate the body's thermogenic fat-burning activity while increasing mental drive, clarity and focus. ",
         "img": "img/1.jpg"
     },
     {
         "id":"2",
         "product": "SHAPESHIFTER Pineapple", 
         "price": "₱775.00",
-        "description":"Our Shape Shifter is an industry leading 2 in 1, fat burner and pre workout! This unique and natural blend combines some of the most effective fat burning ingredients available, with no artificial colours, flavours or preservatives! <br> <br>Shape Shifter contains an innovative blend of Lean GBB™, Vaso6™, Cocoabuterol™, and Cell Charge™ with Acetyl L-Carnitine, L-Carnitine Tartrate, Grains of Paradise, L-Tyrosine, Citrus Aurantium and Natural Caffeine to activate the body's thermogenic fat-burning activity while increasing mental drive, clarity and focus. ",
+        "description":"Our ShapeShifter is an industry leading 2 in 1, fat burner and pre workout! This unique and natural blend combines some of the most effective fat burning ingredients available, with no artificial colours, flavours or preservatives! <br> <br>Shape Shifter contains an innovative blend of Lean GBB™, Vaso6™, Cocoabuterol™, and Cell Charge™ with Acetyl L-Carnitine, L-Carnitine Tartrate, Grains of Paradise, L-Tyrosine, Citrus Aurantium and Natural Caffeine to activate the body's thermogenic fat-burning activity while increasing mental drive, clarity and focus. ",
         "img": "img/2.jpg"
     }, 
     {
         "id":"3",
         "product": "SHAPESHIFTER Apple", 
         "price": "₱777.00",
-        "description":"Our Shape Shifter is an industry leading 2 in 1, fat burner and pre workout! This unique and natural blend combines some of the most effective fat burning ingredients available, with no artificial colours, flavours or preservatives! <br> <br>Shape Shifter contains an innovative blend of Lean GBB™, Vaso6™, Cocoabuterol™, and Cell Charge™ with Acetyl L-Carnitine, L-Carnitine Tartrate, Grains of Paradise, L-Tyrosine, Citrus Aurantium and Natural Caffeine to activate the body's thermogenic fat-burning activity while increasing mental drive, clarity and focus. ",
+        "description":"Our ShapeShifter is an industry leading 2 in 1, fat burner and pre workout! This unique and natural blend combines some of the most effective fat burning ingredients available, with no artificial colours, flavours or preservatives! <br> <br>Shape Shifter contains an innovative blend of Lean GBB™, Vaso6™, Cocoabuterol™, and Cell Charge™ with Acetyl L-Carnitine, L-Carnitine Tartrate, Grains of Paradise, L-Tyrosine, Citrus Aurantium and Natural Caffeine to activate the body's thermogenic fat-burning activity while increasing mental drive, clarity and focus. ",
         "img": "img/3.jpg"
     },
     {
         "id":"4",
         "product": "SHAPESHIFTER Mango", 
         "price": "₱779.00",
-        "description":"Our Shape Shifter is an industry leading 2 in 1, fat burner and pre workout! This unique and natural blend combines some of the most effective fat burning ingredients available, with no artificial colours, flavours or preservatives! <br> <br>Shape Shifter contains an innovative blend of Lean GBB™, Vaso6™, Cocoabuterol™, and Cell Charge™ with Acetyl L-Carnitine, L-Carnitine Tartrate, Grains of Paradise, L-Tyrosine, Citrus Aurantium and Natural Caffeine to activate the body's thermogenic fat-burning activity while increasing mental drive, clarity and focus. ",
+        "description":"Our ShapeShifter is an industry leading 2 in 1, fat burner and pre workout! This unique and natural blend combines some of the most effective fat burning ingredients available, with no artificial colours, flavours or preservatives! <br> <br>Shape Shifter contains an innovative blend of Lean GBB™, Vaso6™, Cocoabuterol™, and Cell Charge™ with Acetyl L-Carnitine, L-Carnitine Tartrate, Grains of Paradise, L-Tyrosine, Citrus Aurantium and Natural Caffeine to activate the body's thermogenic fat-burning activity while increasing mental drive, clarity and focus. ",
         "img": "img/4.jpg"
     },
     {
@@ -135,7 +135,7 @@
     {
         "id":"20",
         "product": "CUSTARD Chocolate", 
-        "price": "₱1280.00",
+        "price": "₱1,280.00",
         "description":"Our Plant Protein Custard is super smooth and creamy, making it the perfect blend for a guilt-free dessert option! With minimal preparation required, this high-protein, low-carb treat is the key ingredient for delicious shakes, smoothie bowls, ice-cream and custard!<br><br>This unique blend is packed full of protein with added healthy fats such as: GoMCT and GoFAT which are a combination of unique, high-potency, keto-friendly fat powders including MCT powder, and cocoa butter aimed at curbing cravings.",
         "img": "img/20.jpg"
     }, 
