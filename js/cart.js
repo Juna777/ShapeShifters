@@ -16,108 +16,111 @@ if (array == null){
     show.innerHTML = "Cart Empty!";
 }else{
     let show = document.getElementById("cart");
-    let totalamount = document.getElementById("total");
-    
+  
     let prod = "";
     let count = 0;
-    //
-    let total = 0;
-  // + button
-function add(a) {
-    count += 1;
-    let qty = document.getElementById("x" + a);
-    qty.value = count;
 
-    let presyo = parseFloat(document.getElementById("p" + a).innerText);
-    if (!isNaN(presyo) && count >= 0) {
-        let total = presyo * count;
-        if (!isNaN(total) && total >= 0) {
-            document.getElementById("total" + a).innerHTML = total;
-            updateTotalPrice(); // Call function to update total price
-        }
-    }
-
-// - button
-function min(a) {
-    let qty = document.getElementById("x" + a);
-
-    if (qty.value <= 1) {
-        count = 1;
-    } else {
-        count -= 1;
+    // + button
+    function add(a){
+        count += 1 ;
+        console.log(a);
+        let qty = document.getElementById("x" +a );
         qty.value = count;
 
-        let presyo = parseFloat(document.getElementById("pp" + a).innerText);
-        if (!isNaN(presyo) && count >= 0) {
-            let total = presyo * count;
-            if (!isNaN(total) && total >= 0) {
-                document.getElementById("total" + a).innerHTML = total;
-                updateTotalPrice(); // Call function to update total price
-            }
+        let presyo = document.getElementById("p" + a).innerText;
+            presyo = presyo * count;
+        sdocument.getElementById("total" + a).innerHTML = presyo;
+            console.log(presyo); 
+    }
+
+     // - button
+    function min(a){
+        let qty = document.getElementById("x" +a );
+
+        if (qty.value == 1){
+            count = 1;
+        }else{
+
+            count -= 1 ;
+            //console.log(a);
+            qty.value = count;
+
+            let presyo = document.getElementById("pp" + a).innerText;
+            presyo = presyo * count;
+            document.getElementById("total" + a).innerHTML = presyo;
+            //console.log(presyo); 
+
         }
+
     }
 
+    function delBtn(a){
+        //check if we got the correct id
+        console.log(a);
+        //get the array from local storage
+        let array = JSON.parse(localStorage.getItem("order")); 
+        //check if we got the array
+        console.log(array);
 
-function updateTotalPrice() {
-    let totalPrices = document.querySelectorAll('[id^="total"]');
-    let totalPrice = 0;
-    totalPrices.forEach(element => {
-        totalPrice += parseFloat(element.innerHTML);
-    });
+        //we filter the array so that we can get the array without the product that we want to delete
+        function checkID(itemz){
+            return itemz.id != a;
+        } 
+        //assign the new array to a new variable
+        let new_array = array.filter(checkID);
+        //set the updated order list to the local storage
+        localStorage.setItem("order",JSON.stringify(new_array));
 
-    // Prevent NaN from appearing below the card
-    totalPrice = isNaN(totalPrice) ? 0 : totalPrice;
+        console.log(array.filter(checkID));
 
-    document.getElementById("totalPrice").innerText = `Total: $${totalPrice.toFixed(2)}`;
-}s
+        //remove the element from the display        
+        let element = document.getElementById("elem" + a);
+        element.remove();
     }
-}
-function deleteItem(id) {
-    const itemIndex = orderlist.findIndex(i => i.id === id);
-    if (itemIndex !== -1) {
-      orderlist.splice(itemIndex, 1);
-      saveCart();
-      updateOrderSummary();
-    }
-  }
-  
- 
 
     unique.forEach(
-    function (item){   
-       
+    function (item){      
+     
         count = array.filter(existing).length;
 
         function existing(itemz){
             return itemz.id == item.id;
         }
-            total += Number(item.price);
-            
+       
+
+
+
             prod += `
-            <li class="card mb-3 id="elem${item.id}" style="width:50%; heigh:10%;background-color: silver;border-radius: 5px; box-shadow: 5px 5px 5px rgb(55, 143, 146);">
-                <div class="row g-0" style>
-                    <div class="col-md-6">
-                        <button id="del${item.id}" class="position-absolute top-0 end-0 text-decoration-none" style="background-color:silver;color:#63ada8;border: none;padding: 10px 15px; font-size: 18px;" onclick=delBtn(${item.id})>x</button>
-                        <br>
-                        <img src="${item.img}" style="width: 70%; height: 60%; border-radius: 5px; box-shadow: 2px 2px 2px rgb(55, 143, 146);">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card-body fw-bold fs-6" style="color:green;">
-                            <p id="pp${item.id}">${item.product}</p> <br> 
-                            <p id="pp${item.id}">Amount: ${item.price}</p>
-                            <button style="background-color:silver; border: none;padding: font-size: 18px;" onclick=min(${item.id})>-</button>
-                            <input style="width:50px;" id="x${item.id}" type="number" value=${count} readonly> 
-                            <button style="background-color:silver; border: none;font-size: 18px;" onclick=add(${item.id})>+</button> 
+            <center>
+            <li id="elem${item.id}"  style="width:60%; heigh:5%;background-color: silver;border-radius: 5px; box-shadow: 3px 3px 3px rgb(55, 143, 146);list-style: none;">
+            <div class="card mb-3" style="background-color: #ccc;height:40%;width:100%">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                        <button id="del${item.id}" class="position-absolute top-0 end-0" onclick= delBtn(${item.id}) >x</button>
+                        <img src="${item.img}" style="width: 80%; height: 40%; border-radius: 5px; box-shadow: 2px 2px 2px rgb(55, 143, 146);margin-top:70px;">
+                        </div>
+                        <div class="col-md-8">
+                        <div class="card-body">
+                        Product Name: ${item.product} <br>
+            
+                        <p id="pp${item.id}">${item.price}</p> <br> 
+            
+                        <p id="total${item.id}">${item.price}</p>
+            
+                        <button onclick= min(${item.id})  style="border: none;"width:20px;">-</button>
+            
+                        <input style="width:30px;" id="x${item.id}" type="number" value=${count} readonly> 
+            
+                        <button  onclick= add(${item.id}) style="border: none;"width:20px;"">+</button> 
+                        </div>
                         </div>
                     </div>
-                </div>
-            <li>`;
-            });
-
+                    </div>
+            </li><br></center>`;
+            
+    })
     show.innerHTML = prod;
-    
-    totalamount.innerHTML = total;
-        }
+}
 
 //array  = list (kahit may redundant)
 let sample = [1, 1, 2, 2, 3 ,4];
@@ -128,7 +131,6 @@ let uniquesample = [... new Set(sample)];
 // 4 unique 
 // console.log(sample);
 // console.log(uniquesample);
-
 document.addEventListener("DOMContentLoaded", function() {
     displayOrderSummary();
 });
@@ -158,8 +160,9 @@ function displayOrderSummary() {
     }
 }
 
-    function logout(){
+function logout(){
     sessionStorage.removeItem("login");
     location.replace("login.html");
-    }
+}
+
 }

@@ -42,7 +42,14 @@
   }
 }
 
-
+#features{
+  padding: 5px;
+  margin-inline-start: 5px;
+}
+.card{
+  padding: 5px;
+  margin-inline-start: 5px;
+}
 .contact{
     padding: 30px;
     padding-bottom: 30px;

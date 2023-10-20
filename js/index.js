@@ -8,4 +8,6 @@ function x(position){
    x.innerHTML = `Latitude: ${position.coords.latitude} Longitude:  ${position.coords.longitude}`;
 }
 
-getloc()
+getloc();
+
+
