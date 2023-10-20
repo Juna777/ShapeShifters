@@ -1,4 +1,4 @@
-const url = `https://juna777.github.io/ShapeShifters/data/js/api.js`;
+const url = `https://juna777.github.io/ShapeShifters/data/api.js`;
 
 fetch(url)
 .then( response => response.json())
