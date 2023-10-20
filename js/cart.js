@@ -101,9 +101,9 @@ if (array == null){
                         <div class="card-body">
                         Product Name: ${item.product} <br>
             
-                        <p id="pp${item.id}">${item.price}</p> <br> 
+                        <p id="pp${item.id}">Price:${item.price}</p> <br> 
             
-                        <p id="total${item.id}">${item.price}</p>
+                       
             
                         <button onclick= min(${item.id})  style="border: none;width:15px;">-</button>
             
@@ -141,7 +141,7 @@ function displayOrderSummary() {
 
     if (cart === null || cart.length === 0) {
         summaryList.innerHTML = "<li sty>No items in the cart</li>";
-        totalPriceElement.innerText = "Total Price: $0.00";
+        totalPriceElement.innerText = "Total Price: ₱0.00";
     } else {
         let totalPrice = 0;
 
@@ -154,7 +154,7 @@ function displayOrderSummary() {
     totalPrice += parseFloat(priceWithoutCurrency);
 });
 
-    totalPriceElement.innerText = `Total Price: $${totalPrice.toFixed(2)}`;
+    totalPriceElement.innerText = `Total Price: ₱${totalPrice.toFixed(2)}`;
     }
 }
 
