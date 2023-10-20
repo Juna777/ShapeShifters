@@ -1,4 +1,4 @@
-const url = `https://juna777.github.io/MP2NOtes/js/api.js`;
+const url = `https://juna777.github.io/ShapeShifters/js/api.js`;
 
 fetch(url)
 .then( response => response.json())
