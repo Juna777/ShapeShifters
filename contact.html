@@ -1,267 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShapeShifters</title>
-    <link rel="icon" type="image" href="img/logo.png">
-    <link rel="stylesheet" href="index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShapeShifters</title>
+  <link rel="icon" type="image" href="img/logo.png">
+  <link rel="stylesheet" href="css/index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-<body style="background-color: #9fe0dd;">
-  <!-- Messenger Chat plugin Code -->
-    <div id="fb-root"></div>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+}
 
-    <!-- Your Chat plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
 
-    <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "136476399546403");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
 
-    <!-- Your SDK code -->
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v18.0'
-        });
-      };
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
 
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="" width="70px" height="70px"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html"><b>Home</b></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html"><b>About</b></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="shop.html"><b>Shop</b></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cc.html"><b>Calorie Counter</b></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html"><b>Contact Us</b></a>
-          </li>
-          <li>
-            <a class="nav-link" href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-              </svg>
-              <p class="d-inline-block"  id="cartlength"></p>
-             </a>
-          </li>
-          </ul>
-            <h6><a href="login.html">Log-in</a></h6>
-            <h6><a href="signup.html">Sign-up</a></h6>
-            
-          </div>
-    </div>
-</nav>
-<center>
-      <br><br><br>
-  <br>
-  <h5 style="color: #125752;">got a question?</h5>
-  <br>
-  <h1 class="fw-bolder">Contact Shapeshifters</h1> <br><img src="../img/logo.png" height="200px" weight="200px">
-  <br><br>
-  <h4 style="color: #125752;"> We're here to help and answer any question you might have.💚</h4>
-  <br><br><br>
-  <div  style="background-color: #9fe0dd">
-      <h5 class="fw-medium">FAQs</h5>
-      <div class="accordion" id="accordionPanelsStayOpenExample font-family-sans-serif" style="width: 80%;">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-              data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-              aria-controls="panelsStayOpen-collapseOne" style="background-color: #9fe0dd">
-              Q: How can I reach your customer support team?
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+</style>
+<body>
+    <body style="background-color: #9fe0dd;">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="" width="70px" height="70px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
-          </h2>
-          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-            <div class="accordion-body">
-              A: To get in touch with our customer support, you can either email us at [email protected] or use the live
-              chat feature on our website. We are available [mention your support hours here] to assist you with any
-              questions or concerns you may have.
-            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="index.html"><b>Home</b></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"><b>About</b></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="shop.html"><b>Shop</b></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="cc.html"><b>Calorie Counter</b></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html"><b>Contact Us</b></a>
+                </li>
+                <li>
+                  <a class="nav-link" href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                      <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                    <p class="d-inline-block"  id="cartlength"></p>
+                   </a>
+                </li>
+                </ul>
+                  <h6><a href="login.html">Log-in</a></h6>
+                  <h6><a href="signup.html">Sign-up</a></h6>
+                </div>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-              aria-controls="panelsStayOpen-collapseTwo" style="background-color: #9fe0dd">
-              Q: What payment methods do you accept?
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              A: We accept various payment methods, including credit/debit cards (Visa, Mastercard, American Express),
-              Gcash, PayMaya and bank transfers. You can select your preferred payment option during the checkout process.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-              aria-controls="panelsStayOpen-collapseThree" style="background-color: #9fe0dd">
-              Q: How long does shipping usually take?
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              A: Shipping times may vary depending on your location and the shipping method chosen. Typically, it can
-              range from 3-5 business days. You can track your package using the provided tracking number.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item ">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-              aria-controls="panelsStayOpen-collapseTwo" style="background-color: #9fe0dd">
-              Q: Can I cancel or modify my order?
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              A: If you need to cancel or modify your order, please reach out to our customer support team as soon as
-              possible. We will do our best to accommodate your request if the order has not been processed or shipped
-              yet. However, please note that during peak seasons or sale periods, the processing time may be faster, and
-              we might not be able to modify or cancel your order.
-            </div>
-          </div>
-        </div>
-      </div>
-      <br><br><br>
-      <div class="mb-3" style="width: 80%; background-color: #9fe0dd">
-          <div class="row g-0">
-              <div class="col-md-6">
-                  <form class="contact" name="form" onsubmit="return validated()">
-                      <div class="mb-3">
-                          <div id="text_error">Please Type Your Name</div>
-                          <input type="text" name="text" placeholder="James Bond" class="form-control">
-                      </div>
-                      <div id="email_error">Please Type Your Email</div><br>
-                      <input type="email" autocomplete="off" name="email" placeholder="example@company.com"
-                          class="form-control">
-                      <div class="mb-3">
-                          <label for="exampleFormControlTextarea1" class="form-label"></label>
-                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                              placeholder="Your Message"></textarea>
-                      </div>
-                      <br><br>
-                      <!-- Button trigger modal -->
-                      <button type="button" style="width: 100%; height: 35px; background-color: #63ada8; border-radius: 5px;" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                          send
+      </nav>
+      <center>
+    <br>
+    <br>
+    
+    <h5 style="color: #125752;">Have a query?</h5>
+    <br>
+    <h1 class="fw-bolder">Contact Shapeshifters</h1> <br><img src="img/logo.png" height="200px" weight="200px">
+    <br><br>
+    <h4 style="color: #125752;">"We're at your service for any inquiries you might have."💚</h4>
+    <br><br><br>
+      <div class="card mb-3 position-start-50" style="max-width: 900px;padding:10px;box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <div class="container">
+                <h2 style="color:#9fe0dd;">Contact Us</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="johndoe@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Hi! Please type your message here." required></textarea>
+                    </div>
+
+                    <!-- Button trigger modal -->
+                        <button type="button"  id="submitButton" style="background-color: #9fe0dd;box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);" class="btn " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Submit
                         </button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Thank you for getting in touch!😊</h1><br>
-                              </div>
-                              <div class="modal-body">
-                                .<h4>
-                                  We appreciate you reaching out to us and will respond promptly. Stay tuned for our immediate response!</h4>..
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" style="width: 100%; height: 35px; background-color: #63ada8; border-radius: 5px;" data-bs-dismiss="modal">Close</button>
-                              </div>
+                 </form>
+                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
                             </div>
-                          </div>
+                            <div class="modal-body">
+                                Thank you for getting in touch!😊
+                                </div>
+                            <div class="modal-footer">
+                            <a href="contact.html"><button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button></a>
+                            <div id="successMessage"></div>
                         </div>
-                  </form>
-              </div>
-              <div class="col-md-6">
-                  <div class="card-body">
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15702.770013823876!2d123.87056928195466!3d10.286341187344698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1697404923942!5m2!1sen!2sph" 
-                          height="425" width="100%" style="border-radius: 15px;
-                          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-                          background-color: #9fe0dd; margin-right: 100px;" allowfullscreen="" loading="lazy"
-                          referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-body">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15702.770013823876!2d123.87056928195466!3d10.286341187344698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1697404923942!5m2!1sen!2sph" 
+                        height="425" width="100%" style="border-radius: 5px;
+                        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+                        background-color: #9fe0dd;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                </div>
+                </div>
+            </div>
+            <br><br>
+        
+                <div class="accordion" id="accordionExample" style="border-color: #091716; max-width: 900px;position: center;box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color: #9fe0dd;">
+                            Q: How can I reach your customer support team?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body" style="text-align: left;">
+                            A: To get in touch with our customer support, you can either email us at shapeshifters.com or use the live
+                            chat feature on our website. We are available 24/7 to assist you with any
+                            questions or concerns you may have.
+                        </div>
+                    </div>
+                    </div>
+                    <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="background-color: #9fe0dd;">
+                            Q: What payment methods do you accept?
+                        </button>
+                        </h2>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body" style="text-align: left;">
+                            A: We accept various payment methods, including credit/debit cards (Visa, Mastercard, American Express),
+                            Gcash, PayMaya and bank transfers. You can select your preferred payment option during the checkout process.
+                        </div>
+                    </div>
+                    </div>
+                    <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="background-color: #9fe0dd">
+                            Q: How long does shipping usually take?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body" style="text-align: left;">
+                            A: Shipping times may vary depending on your location and the shipping method chosen. Typically, it can
+                            range from 3-5 business days. You can track your package using the provided tracking number.
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <br><br><br>
+            </center>
+            <footer class=" text-black pt-5 pb-4">
+                <div class="containerf text-center text-md-left">
+                  <div class="row text-center text-md-left">
+                    <div class="col-md-3 col-lg col-xl-3 mx-auto mt-3">
+                      <h5 class="text-uppercase mb-4 font-weight-bold text-">Shapeshifters.com</h5>
+                      <p style="text-align: left;margin-left: 35px;margin-right:25px ;">If you have any questions, feedback, or suggestions, we'd love to hear from you. Get in touch with us </p>
+                    </div>
+              
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto m-3">
+                        <h5 class="text-uppercase mb-4 font-weight-bold text-black">Contact</h5>
+                        <p style="text-align: left;">
+                          <i class="fas fa-home" style="margin-left: 35px;margin-right:25px ;"></i> Mambaling,Cebu Philippines</p>
+                        </p>
+                        <p style="text-align: left;">
+                          <i class="fas fa-envelope" style="margin-left: 35px;margin-right:25px ;"></i> ShapeShifters@gmail.com
+                        </p>
+                        <p style="text-align: left;">
+                          <i class="fas fa-phone" style="margin-left: 35px;margin-right:25px ;"></i> +639163711952
+                        </p>
+                        <p style="text-align: left;">
+                          <i class="fas fa-print" style="margin-left:35px;margin-right:25px ;"></i> +112-43554
+                        </p>
+                      </div>
+                      
+                    <div class="col-md-4 col-lg col-xl-4 mt-3">
+                      <h5 class="text-uppercase mb-4 font-weight-bold text-black">Follow us</h5>
+                      <ul style="margin-right:45px;">
+                        <li class="list-inline-item">
+                          <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-youtube"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-tiktok"></i></a>
+                        </li>
+                      </ul>
                   </div>
-              </div>
-          </div>
-      </div>  
- </center>
- <br><br><br>
-  <footer class="text-black pt-5 pb-4">
-    <div class="container text-center text-md-left">
-      <div class="row text-center text-md-left">
-        <div class="col-md-3 col-lg col-xl-3 mx-auto mt-3">
-          <h5 class="text-uppercase mb-4 font-weight-bold text-">Shapeshifters.com</h5>
-          <p>If you have any questions, feedback, or suggestions, we'd love to hear from you. Get in touch with us </p>
-        </div>
-
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto m-3">
-          <h5 class="text-uppercase mb-4 font-weight-bold text-black">Contact</h5>
-          <p>
-            <i class="fas fa-home" style="margin-right: 8px;"></i> Mambaling, Cebu City, Philippines
-          </p>
-          <p>
-            <i class="fas fa-envelope" style="margin-right: 8px;"></i> ShapeShifters@gmail.com
-          </p>
-          <p>
-            <i class="fas fa-phone" style="margin-right: 8px;"></i> +639163711952
-          </p>
-          <p>
-            <i class="fas fa-print" style="margin-right: 8px;"></i> +112-43554
-          </p>
-        </div>
-
-        <div class="col-md-4 col-lg col-xl-4 mt-3">
-          <h5 class="text-uppercase mb-4 font-weight-bold text-black">Follow us</h5>
-          <ul>
-            <li class="list-inline-item">
-              <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-facebook"></i></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-youtube"></i></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-tiktok"></i></a>
-            </li>
-          </ul>
-        </div>
-        <hr class="mb-4">
-        <div class="text-center text-black">
-          <p> © 2023 Shapeshifters.com. All rights reserved.</p>
-        </div>
-
-      </div>
-
-  </footer>
-  <script src="../contact.js"></script>
+                  <hr class="mb-4">
+                  <div class="text-center text-black">
+                    <p> © 2023 Shapeshifters.com. All rights reserved.</p>
+                  </div>
+              
+                </div>
+              
+              </footer>
+    <script src="js/contact.js"></script>
 </body>
 
 </html>

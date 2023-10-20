@@ -28,7 +28,39 @@
   .navbar a:hover {
     background-color: #63ada8;
     color: black;
-  }
+  
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
 
         body {
     font-family: Arial, sans-serif;
@@ -112,7 +144,7 @@
     </style>
 </head>
 
-<body>
+<body style="background-color: SILVER;">
     <div class="container">
         <div class="left-side">
             <form id="personal-details-form">
@@ -137,107 +169,66 @@
                 <div class="form-group">
                     <label for="zipCode">ZIP Code</label>
                     <input type="text" id="zipCode" name="zipCode" required>
-                </div>
-            </form>
+
+        <div class="form-group">
+            <label for="shipping">Shipping Method:</label>
+            <select id="shipping" name="shipping" required>
+                <option value="free">Free Shipping</option>
+            </select>
         </div>
-        <div class="right-side">
-            <div class="card payment-card">
-                <div class="card-body">
-                    <h2>Payment Options</h2>
-                    <p id="totalPrice"></p>
-                    <div class="form-group">
-                        <label for="paymentMethod">Select Payment Method</label>
-                        <select id="paymentMethod" name="paymentMethod" required>
-                            <option value="" disabled selected>Select Payment Method</option>
-                            <option value="gcash">Gcash</option>
-                            <option value="paymaya">Pay Maya</option>
-                            <option value="bankDebit">Bank Debit</option>
-                            <option value="creditCard">Credit Card</option>
-                        </select>
-                    </div>
-                    <div id="gcash" class="payment-option-details hidden">
-                        <div class="form-group">
-                            <label for="gcashNumber">Gcash Number</label>
-                            <input type="text" id="gcashNumber" name="gcashNumber">
-                        </div>
-                    </div>
-                    <div id="paymaya" class="payment-option-details hidden">
-                        <div class="form-group">
-                            <label for="paymayaNumber">PayMaya Number</label>
-                            <input type="text" id="paymayaNumber" name="paymayaNumber">
-                        </div>
-                        <div class="form-group">
-                            <label for="paymayaExpiryDate">Expiry Date</label>
-                            <input type="text" id="paymayaExpiryDate" name="paymayaExpiryDate" placeholder="MM/YYYY">
-                        </div>
-                        <div class="form-group">
-                            <label for="paymayaCvv">CVV</label>
-                            <input type="text" id="paymayaCvv" name="paymayaCvv" maxlength="3">
-                        </div>
-                    </div>
-                    <div id="bankDebit" class="payment-option-details hidden">
-                        <div class="form-group">
-                            <label for="debitCardNumber">Card Number</label>
-                            <input type="text" id="debitCardNumber" name="debitCardNumber">
-                        </div>
-                        <div class="form-group">
-                            <label for="debitExpiryDate">Expiry Date</label>
-                            <input type="text" id="debitExpiryDate" name="debitExpiryDate" placeholder="MM/YYYY">
-                        </div>
-                        <div class="form-group">
-                            <label for="debitCVV">CVV</label>
-                            <input type="text" id="debitCVV" name="debitCVV" maxlength="3">
-                        </div>
-                        <div class="form-group">
-                            <label for="debitCardName">Name on Card</label>
-                            <input type="text" id="debitCardName" name="debitCardName">
-                        </div>
-                    </div>
-                    <div id="creditCard" class="payment-option-details hidden">
-                        <div class="form-group">
-                            <label for="cardNumber">Card Number</label>
-                            <input type="text" id="cardNumber" name="cardNumber">
-                        </div>
-                        <div class="form-group">
-                            <label for="expiryDate">Expiry Date</label>
-                            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YYYY">
-                        </div>
-                        <div class="form-group">
-                            <label for="cvv">CVV</label>
-                            <input type="text" id="cvv" name="cvv" maxlength="3">
-                        </div>
-                    </div>
-                                <button type="button" class="btn-lg btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    Make Payment
-                                </button>
-                                <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel" style="background-color: #9fe0dd;color: #4d8b80">Payment Successful!</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                Thank you for your payment. Your order has been processed successfully.
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
 
-
-                   
-                        </div>
-                </div>
+        <div class="container">
+            <h2>Payment Details</h2>
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod">
+                <option value="" disabled selected>Select Payment Method</option>
+                <option value="creditCard">Credit Card</option>
+                <option value="debitCard">Debit Card</option>
+                <option value="gcash">GCash</option>
+                <option value="paymaya">PayMaya</option>
+            </select>
+    
+            <div id="creditCardFields" class="hidden payment-fields">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" placeholder="MM/YY">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" placeholder="123">
             </div>
+    
+            <div id="debitCardFields" class="hidden payment-fields">
+                <label for="debitCardNumber">Debit Card Number:</label>
+                <input type="text" id="debitCardNumber" placeholder="9876 5432 1098 7654">
+                <label for="debitExpiryDate">Expiry Date:</label>
+                <input type="text" id="debitExpiryDate" placeholder="MM/YY">
+                <label for="debitCVV">CVV:</label>
+                <input type="text" id="debitCVV" placeholder="456">
+            </div>
+    
+            <div id="gcashFields" class="hidden payment-fields">
+                <label for="gcashNumber">GCash Number:</label>
+                <input type="text" id="gcashNumber" placeholder="09123456789">
+            </div>
+    
+            <div id="paymayaFields" class="hidden payment-fields">
+                <label for="paymayaNumber">PayMaya Number:</label>
+                <input type="text" id="paymayaNumber" placeholder="09123456789">
+            </div>
+    
+            <button id="submitBtn">Submit Payment</button>
+    
+            <div id="error-message"></div>
         </div>
+
+    <script src="payment-validation.js"></script>
+</body>
+
+</html>
+
 
     <script src="js/payment.js"></script>
     <script src="js/cart.js"></script>
-    <script src="js/shop.js"></script>
 </body>
 
 </html>

@@ -72,29 +72,16 @@ function updateTotalPrice() {
 }s
     }
 }
-    function delBtn(a){
-        //check if we got the correct id
-        console.log(a);
-        //get the array from local storage
-        let array = JSON.parse(localStorage.getItem("order")); 
-        //check if we got the array
-        console.log(array);
-
-        //we filter the array so that we can get the array without the product that we want to delete
-        function checkID(itemz){
-            return itemz.id != a;
-        } 
-        //assign the new array to a new variable
-        let new_array = array.filter(checkID);
-        //set the updated order list to the local storage
-        localStorage.setItem("order",JSON.stringify(new_array));
-
-        console.log(array.filter(checkID));
-
-        //remove the element from the display        
-        let element = document.getElementById("elem" + a);
-        element.remove();
+function deleteItem(id) {
+    const itemIndex = orderlist.findIndex(i => i.id === id);
+    if (itemIndex !== -1) {
+      orderlist.splice(itemIndex, 1);
+      saveCart();
+      updateOrderSummary();
     }
+  }
+  
+ 
 
     unique.forEach(
     function (item){   
@@ -107,8 +94,8 @@ function updateTotalPrice() {
             total += Number(item.price);
             
             prod += `
-            <div class="card mb-3 id="elem${item.id}" style="width:50%; heigh:10%;background-color: silver;border-radius: 5px; box-shadow: 5px 5px 5px rgb(55, 143, 146);">
-                <div class="row g-0">
+            <li class="card mb-3 id="elem${item.id}" style="width:50%; heigh:10%;background-color: silver;border-radius: 5px; box-shadow: 5px 5px 5px rgb(55, 143, 146);">
+                <div class="row g-0" style>
                     <div class="col-md-6">
                         <button id="del${item.id}" class="position-absolute top-0 end-0 text-decoration-none" style="background-color:silver;color:#63ada8;border: none;padding: 10px 15px; font-size: 18px;" onclick=delBtn(${item.id})>x</button>
                         <br>
@@ -124,7 +111,7 @@ function updateTotalPrice() {
                         </div>
                     </div>
                 </div>
-            </div>`;
+            <li>`;
             });
 
     show.innerHTML = prod;
