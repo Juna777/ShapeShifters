@@ -1,7 +1,7 @@
-
 /* Add some spacing and background color to the navbar */
 .navbar {
-  background-color: #63ada8; /* Set your desired background color */
+  background-color: #63ada8;
+  /* Set your desired background color */
   padding: 10px 0;
 }
 
@@ -13,13 +13,17 @@
 
 /* Style the navigation links */
 .navbar-nav .nav-link {
-  color: #fff; /* Set text color to white */
-  margin: 0 15px; /* Add spacing between the links */
-  font-weight: bold; /* Make the text bold */
+  color: #fff;
+  /* Set text color to white */
+  margin: 0 15px;
+  /* Add spacing between the links */
+  font-weight: bold;
+  /* Make the text bold */
 }
 
 .navbar-nav .nav-link:hover {
-  color: #043532; /* Change text color on hover */
+  color: #043532;
+  /* Change text color on hover */
 }
 
 /* Style the login and signup links */
@@ -38,38 +42,44 @@
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .navbar-nav .nav-link {
-    margin: 10px 0; /* Adjust spacing for smaller screens */
+    margin: 10px 0;
+    /* Adjust spacing for smaller screens */
   }
 }
 
-#features{
+#features {
   padding: 5px;
   margin-inline-start: 5px;
 }
-.card{
+
+.card {
   padding: 5px;
   margin-inline-start: 5px;
 }
-.contact{
-    padding: 30px;
-    padding-bottom: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    background-color: #9fe0dd;
-  }
-  
-#card{
+
+.contact {
+  padding: 30px;
+  padding-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: #9fe0dd;
+}
+
+#card {
   width: 100%;
   padding: 30px;
   padding-bottom: 30px;
   border-radius: 15px;
   box-shadow: 0px 10px 20px #63ada8(5, 112, 243);
-  background:  #bed3d2;
+  background: #bed3d2;
 
 }
-.navbar, footer {
+
+.navbar,
+footer {
   font-family: Arial, sans-serif;
 }
+
 .card-body {
   text-align: center;
 }
@@ -110,6 +120,7 @@
 .login-button:hover {
   background-color: #4f8b82;
 }
-footer{
+
+footer {
   background-color: #bed3d2;
 }

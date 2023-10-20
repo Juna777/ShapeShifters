@@ -40,7 +40,7 @@ function hideAllFields() {
     });
 }
 
-// Validation functions (implement as needed)
+
 function isValidGCashNumber(gcashNumber) {
     return /^09\d{9}$/.test(gcashNumber);
 }

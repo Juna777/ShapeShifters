@@ -6,10 +6,10 @@
         var modal = new bootstrap.Modal(document.getElementById("exampleModal"));
 
         if (name && email && message) {
-            // Form data is valid, show the modal
+    
             modal.show();
         } else {
-            // Form data is not valid, show an alert or handle it in your preferred way
+            
             alert("Please fill out all fields.");
         }
     });

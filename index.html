@@ -1,254 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
 
-          <!DOCTYPE html>
-          <html lang="en">
-            <head>
-              <meta charset="UTF-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>ShapeShifters - Transform Your Body and Mind</title>
-              <link rel="icon" type="image" href="img/logo.png">
-              <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-              <link rel="stylesheet" href="css/index.css">
-            </head>
-          <body style="background-color: #9fe0dd;">
-            <nav class="navbar navbar-expand-lg">
-              <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="" width="70px" height="70px"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="index.html"><b>Home</b></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="about.html"><b>About</b></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="shop.html"><b>Shop</b></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="cc.html"><b>Calorie Counter</b></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="contact.html"><b>Contact Us</b></a>
-                    </li>
-                    <li>
-                      <a class="nav-link" href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                        </svg>
-                        <p class="d-inline-block"  id="cartlength"></p>
-                       </a>
-                    </li>
-                    </ul>
-                      <h6><a href="login.html" >Log-in</a></h6>
-                      <h6><a href="signup.html">Sign-up</a></h6>
-                    </div>
-              </div>
-          </nav>
-            <!-- carousel -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShapeShifters - Transform Your Body and Mind</title>
+  <link rel="icon" type="image" href="img/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
 
-            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="img/1.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/2.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/3.png" class="d-block w-100" alt="...">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-              <p id="demo"></p>
-            </div>
+<body style="background-color: #9fe0dd;">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="" width="70px" height="70px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html"><b>Home</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"><b>About</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html"><b>Shop</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cc.html"><b>Calorie Counter</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html"><b>Contact Us</b></a>
+          </li>
+          <li>
+            <a class="nav-link" href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                <path
+                  d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+              </svg>
+              <p class="d-inline-block" id="cartlength"></p>
+            </a>
+          </li>
+        </ul>
+        <h6><a href="login.html"><b>Log-in</b></a></h6>
+        <h6><a href="signup.html"><b>Sign-up</b></a></h6>
+      </div>
+    </div>
+  </nav>
+  <!-- carousel -->
 
-            
-            <h1 id="loc"></h1>
-             <br><br>
-          
-            <!-- Hero Section -->
-            <section class="hero text-center">
-              <h1>Transform Your Life with ShapeShifters</h1>
-              <p>Your journey to a healthier, happier you starts here.</p>
-              <a href="login.html" class="btn  btn-lg" style="border-radius: 5px; box-shadow: 0px 3px 3px rgb(52, 58, 58); background-color: #63ada8;">Get Started</a>
-            </section>
-            <br><br><br>
-          
-           
-            <!-- Features Section -->
-          <section id="features" class="features text-center">
-              <h2>Integrated Features</h2>
-              <br>
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="card pt-5" style="border-radius: 50%; box-shadow: 2px 2px 2px rgb(80, 206, 206);">
-                    <i class="fas fa-dumbbell fa-3x card-icon"></i>
-                    <div class="card-body">
-                      <a href="https://www.myfitnesspal.com/"  style="text-decoration: none;color: black;"><h3 class="card-title">Custom Workouts</h3>
-                      <p class="card-text">Personalized fitness plans designed just for you.</p></a>
-                      <br><br>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="card pt-5" style="border-radius: 50%; box-shadow: 2px 2px 2px rgb(80, 206, 206);">
-                    <i class="fas fa-utensils fa-3x card-icon"></i>
-                    <div class="card-body">
-                      <a href="https://www.hsph.harvard.edu/nutritionsource/healthy-eating-plate/" style="text-decoration: none;color: black;"><h3 class="card-title">Nutrition Guidance</h3>
-                      <p class="card-text">Expert nutrition advice for a balanced diet.</p></a>
-                      <br><br>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="card pt-5" style="border-radius: 50%; box-shadow: 2px 2px 2px rgb(80, 206, 206);">
-                    <i class="fas fa-users fa-3x card-icon"></i>
-                    <div class="card-body">
-                      <a href="https://cehs.unl.edu/nhs/community-health-wellness-option/" style="text-decoration: none;color: black;"><h3 class="card-title">Supportive Community</h3>
-                      <p class="card-text">Connect with others on the same wellness journey.</p></a>
-                      <br><br>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <br><br><br>
-          
-          <!-- article section  cards-->
-          <center>
-          <div class="container">
-              <div class="card d-inline-block mb-3 m-2" style="width: 18rem; border-radius: 5px; box-shadow: 0px 2px 3px rgb(80, 206, 206);">
-                  <img src="data:image/jpeg;base64,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" class="card-img-top" alt="..." style="height: 6cm; width: 6cm;">
-                  <div class="card-body">
-                    <h5 class="card-title">Health Vs Fitness</h5>
-                    <p class="card-text">difference between health....</p>
-                    <a href="https://opt.net.au/optimum-life/difference-fitness-and-health/" class="btn btn-primary" style="background-color: #63ada8;border-radius: 5px; box-shadow: 0px 3px 3px rgb(52, 58, 58);">read more</a>
-                  </div>
-                </div>
-                <div class="card d-inline-block mb-3 m-2" style="width: 18rem; border-radius: 5px; box-shadow: 0px 2px 3px rgb(80, 206, 206);">
-                  <img src="https://i.pinimg.com/originals/68/3e/6b/683e6bb87ccf3dd50bf04ec00bb13fa6.jpg" class="card-img-top" alt="..." style="height: 6cm; width: 6cm;" >
-                  <div class="card-body">
-                    <h5 class="card-title">7 tips</h5>
-                    <p class="card-text">tips to improve calorie intake...</p>
-                    <a href="https://www.wikihow.com/Increase-Calorie-Intake" class="btn btn-primary" style="background-color: #63ada8;border-radius: 5px; box-shadow: 0px 3px 3px rgb(52, 58, 58);">read more</a>
-                  </div>
-                </div>
-                <div class="card d-inline-block mb-3 mb-2" style="width: 18rem;border-radius: 0px 2px 3px rgb(80, 206, 206);">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpimoYenVAI9lPZbPOpu44dn5R7MuDmtMsKQ&usqp=CAU" class="card-img-top" alt="..." style="height: 6cm; width: 6cm;">
-                  <div class="card-body">
-                    <h5 class="card-title">Workout motivation</h5>
-                    <p class="card-text">planning a workout motivation....</p>
-                    <a href="https://www.womenshealthmag.com/fitness/a19040559/workout-motivation/" class="btn btn-primary" style="background-color: #63ada8;border-radius: 5px; box-shadow: 0px 3px 3px rgb(52, 58, 58);">read more</a>
-                  </div>
-                </div>
-                <div class="card d-inline-block mb-3 m-2" style="width: 18rem;border-radius: 5px; box-shadow: 0px 2px 3px rgb(80, 206, 206);">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ1DXm58w9ZPT8VcG3JCFA63-V-x6WmEr2eg&usqp=CAU" class="card-img-top" alt="..." style="height: 6cm; width: 6cm;">
-                  <div class="card-body">
-                    <h5 class="card-title">Healty lifestyle</h5>
-                    <p class="card-text">healthier lifestyle for beginners...</p>
-                    <a href="https://knowablemagazine.org/article/mind/2021/the-science-habits" class="btn btn-primary" style="background-color: #63ada8;border-radius: 5px; box-shadow: 0px 3px 3px rgb(52, 58, 58);">read more</a>
-                  </div>
-                </div>
-                <div class="card d-inline-block mb-3 m-2" style="width: 18rem;border-radius: 5px; box-shadow: 0px 2px 3px rgb(80, 206, 206);">
-                  <img src="https://i.pinimg.com/236x/2b/18/c0/2b18c0a4c7900142c8e3ab16fd5f534b.jpg" class="card-img-top" alt="..." style="height: 6cm; width: 6cm;">
-                  <div class="card-body">
-                    <h5 class="card-title">Full body flow</h5>
-                    <p class="card-text">better workout experience..</p>
-                    <a href="https://www.youtube.com/watch?v=0HD3VoUVov0" class="btn btn-primary" style="background-color: #63ada8;border-radius: 5px; box-shadow: 0px 3px 3px rgb(52, 58, 58);">read more</a>
-                  </div>
-                </div>
-                <div class="card d-inline-block mb-3 m-2" style="width: 18rem;border-radius: 5px; box-shadow:0px 2px 3px rgb(80, 206, 206);">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtTtIE2yTdYjnMv0cX_MNV6-rJeEd23oL2-Q&usqp=CAU" class="card-img-top" alt="..." style="height: 6cm; width: 6cm;">
-                  <div class="card-body">
-                    <h5 class="card-title">5 tips</h5>
-                    <p class="card-text">improve your overall health...</p>
-                    <a href="https://www.genomicwellbeing.com/" class="btn btn-primary" style="background-color: #63ada8;border-radius: 5px; box-shadow: 0px 3px 3px rgb(52, 58, 58);">read more</a>
-                  </div>
-                </div>
-                <div class="card d-inline-block mb-3 m-2" style="width: 18rem;border-radius: 5px; box-shadow: 0px 2px 3px rgb(80, 206, 206);">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTewUbGd5S5hzLepPVBMB_-4VRiFOifWfDy8A&usqp=CAU" class="card-img-top" alt="..." style="height: 6cm; width: 6cm; ">
-                  <div class="card-body">
-                    <h5 class="card-title">Caloric Deficit</h5>
-                    <p class="card-text">caloric deficit pros and cos...</p>
-                    <a href="https://www.webmd.com/diet/calorie-deficit" class="btn btn-primary" style="background-color: #63ada8; border-radius: 5px; box-shadow: 0px 3px 3px rgb(52, 58, 58);" >read more</a>
-                  </div>
-                </div>
-                <div class="card d-inline-block mb-3 m-2" style="width: 18rem;border-radius: 5px; box-shadow: 0px 2px 3px rgb(80, 206, 206);">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTii9zDAsf70sHEiwQ1rhfapYIstR3lwRJWnQ&usqp=CAU" class="card-img-top" alt="..." style="height: 6cm; width: 6cm;">
-                  <div class="card-body">
-                    <h5 class="card-title">Gym ethics</h5>
-                    <p class="card-text">workingout's do's and dont's...</p>
-                    <a href="https://www.cnet.com/health/fitness/gym-etiquette-for-newbies-dont-break-these-10-important-rules/" class="btn btn-primary" style="background-color: #63ada8; border-radius: 5px; box-shadow: 0px 3px 3px rgb(52, 58, 58);">read more</a>
-                  </div>
-                </div>
-              </center>
-              <br><br><br>
-            <footer class=" text-black pt-5 pb-4">
-              <div class="container text-center text-md-left">
-                <div class="row text-center text-md-left">
-                  <div class="col-md-3 col-lg col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-">Shapeshifters.com</h5>
-                    <p style="text-align: left;">If you have any questions, feedback, or suggestions, we'd love to hear from you. Get in touch with us </p>
-                  </div>
-            
-                  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto m-3">
-                      <h5 class="text-uppercase mb-4 font-weight-bold text-black">Contact</h5>
-                      <p style="text-align: left;">
-                        <i class="fas fa-home" style="margin-right: 8px;"></i> Mambaling, Cebu City, Philippines
-                      </p>
-                      <p style="text-align: left;">
-                        <i class="fas fa-envelope" style="margin-right: 8px;;"></i> ShapeShifters@gmail.com
-                      </p>
-                      <p style="text-align: left;">
-                        <i class="fas fa-phone" style="margin-right: 8px;"></i> +639163711952
-                      </p>
-                      <p style="text-align: left;">
-                        <i class="fas fa-print" style="margin-right: 8px;"></i> +112-43554
-                      </p>
-                    </div>
-                    
-                  <div class="col-md-4 col-lg col-xl-4 mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold text-black">Follow us</h5>
-                    <ul>
-                      <li class="list-inline-item">
-                        <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-twitter"></i></a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-facebook"></i></a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-instagram"></i></a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-youtube"></i></a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-tiktok"></i></a>
-                      </li>
-                    </ul>
-                </div>
-                <hr class="mb-4">
-                <div class="text-center text-black">
-                  <p> © 2023 Shapeshifters.com. All rights reserved.</p>
-                </div>
-            
-              </div>
-              <script src="js/index.js"></script>
-              <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-              <script src="https://www.nutritionix.com/js/nutrition-label-widget.min.js"></script>
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/1.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/2.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/3.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    <p id="demo"></p>
+  </div>
 
-            </footer>
-          
-          </body>
-          </html>
 
+  <h1 id="loc"></h1>
+  <br><br>
+
+  <!-- Hero Section -->
+  <section class="hero text-center">
+    <h1>Transform Your Life with ShapeShifters</h1>
+    <p>Your journey to a healthier, happier you starts here.</p>
+    <a href="login.html" class="btn  btn-lg"
+      style="border-radius: 5px; box-shadow: 0px 3px 3px rgb(52, 58, 58); background-color: #63ada8;">Get Started</a>
+  </section>
+  <br><br><br>
+
+
+  <!-- Features Section -->
+  <section id="features" class="features text-center">
+    <h2>Integrated Features</h2>
+    <br>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card pt-5" style="border-radius: 50%; box-shadow: 2px 2px 2px rgb(80, 206, 206);">
+          <i class="fas fa-dumbbell fa-3x card-icon"></i>
+          <div class="card-body">
+            <a href="https://www.myfitnesspal.com/" style="text-decoration: none;color: black;">
+              <h3 class="card-title">Custom Workouts</h3>
+              <p class="card-text">Personalized fitness plans designed just for you.</p>
+            </a>
+            <br><br>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card pt-5" style="border-radius: 50%; box-shadow: 2px 2px 2px rgb(80, 206, 206);">
+          <i class="fas fa-utensils fa-3x card-icon"></i>
+          <div class="card-body">
+            <a href="https://www.hsph.harvard.edu/nutritionsource/healthy-eating-plate/"
+              style="text-decoration: none;color: black;">
+              <h3 class="card-title">Nutrition Guidance</h3>
+              <p class="card-text">Expert nutrition advice for a balanced diet.</p>
+            </a>
+            <br><br>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card pt-5" style="border-radius: 50%; box-shadow: 2px 2px 2px rgb(80, 206, 206);">
+          <i class="fas fa-users fa-3x card-icon"></i>
+          <div class="card-body">
+            <a href="https://cehs.unl.edu/nhs/community-health-wellness-option/"
+              style="text-decoration: none;color: black;">
+              <h3 class="card-title">Supportive Community</h3>
+              <p class="card-text">Connect with others on the same wellness journey.</p>
+            </a>
+            <br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br><br>
+
+  <!-- article section  cards-->
+  <center>
+    <div class="container">
+      <div class="card d-inline-block mb-3 m-2"
+        style="width: 18rem; border-radius: 5px; box-shadow: 0px 2px 3px rgb(80, 206, 206);">
+        <img
+          src="data:image/jpeg;base64,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"
+          class="card-img-top" alt="..." style="height: 6cm; width: 6cm;">
+        <div class="card-body">
+          <h5 class="card-title">Health Vs Fitness</h5>
+          <p class="card-text">difference between health....</p>
+          <a href="https://opt.net.au/optimum-life/difference-fitness-and-health/" class="btn btn-primary"
+            style="background-color: #63ada8;border-radius: 5px; box-shadow: 0px 3px 3px rgb(52, 58, 58);">read more</a>
+        </div>
+      </div>
+      <div class="card d-inline-block mb-3 m-2"
+        style="width: 18rem; border-radius: 5px; box-shadow: 0px 2px 3px rgb(80, 206, 206);">
+        <img src="https://i.pinimg.com/originals/68/3e/6b/683e6bb87ccf3dd50bf04ec00bb13fa6.jpg" class="card-img-top"
+          alt="..." style="height: 6cm; width: 6cm;">
+        <div class="card-body">
+          <h5 class="card-title">7 tips</h5>
+          <p class="card-text">tips to improve calorie intake...</p>
+          <a href="https://www.wikihow.com/Increase-Calorie-Intake" class="btn btn-primary"
+            style="background-color: #63ada8;border-radius: 5px; box-shadow: 0px 3px 3px rgb(52, 58, 58);">read more</a>
+        </div>
+      </div>
+      <div class="card d-inline-block mb-3 mb-2" style="width: 18rem;border-radius: 0px 2px 3px rgb(80, 206, 206);">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpimoYenVAI9lPZbPOpu44dn5R7MuDmtMsKQ&usqp=CAU"
+          class="card-img-top" alt="..." style="height: 6cm; width: 6cm;">
+        <div class="card-body">
+          <h5 class="card-title">Workout motivation</h5>
+          <p class="card-text">planning a workout motivation....</p>
+          <a href="https://www.womenshealthmag.com/fitness/a19040559/workout-motivation/" class="btn btn-primary"
+            style="background-color: #63ada8;border-radius: 5px; box-shadow: 0px 3px 3px rgb(52, 58, 58);">read more</a>
+        </div>
+      </div>
+      <div class="card d-inline-block mb-3 m-2"
+        style="width: 18rem;border-radius: 5px; box-shadow: 0px 2px 3px rgb(80, 206, 206);">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ1DXm58w9ZPT8VcG3JCFA63-V-x6WmEr2eg&usqp=CAU"
+          class="card-img-top" alt="..." style="height: 6cm; width: 6cm;">
+        <div class="card-body">
+          <h5 class="card-title">Healty lifestyle</h5>
+          <p class="card-text">healthier lifestyle for beginners...</p>
+          <a href="https://knowablemagazine.org/article/mind/2021/the-science-habits" class="btn btn-primary"
+            style="background-color: #63ada8;border-radius: 5px; box-shadow: 0px 3px 3px rgb(52, 58, 58);">read more</a>
+        </div>
+      </div>
+      <div class="card d-inline-block mb-3 m-2"
+        style="width: 18rem;border-radius: 5px; box-shadow: 0px 2px 3px rgb(80, 206, 206);">
+        <img src="https://i.pinimg.com/236x/2b/18/c0/2b18c0a4c7900142c8e3ab16fd5f534b.jpg" class="card-img-top"
+          alt="..." style="height: 6cm; width: 6cm;">
+        <div class="card-body">
+          <h5 class="card-title">Full body flow</h5>
+          <p class="card-text">better workout experience..</p>
+          <a href="https://www.youtube.com/watch?v=0HD3VoUVov0" class="btn btn-primary"
+            style="background-color: #63ada8;border-radius: 5px; box-shadow: 0px 3px 3px rgb(52, 58, 58);">read more</a>
+        </div>
+      </div>
+      <div class="card d-inline-block mb-3 m-2"
+        style="width: 18rem;border-radius: 5px; box-shadow:0px 2px 3px rgb(80, 206, 206);">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtTtIE2yTdYjnMv0cX_MNV6-rJeEd23oL2-Q&usqp=CAU"
+          class="card-img-top" alt="..." style="height: 6cm; width: 6cm;">
+        <div class="card-body">
+          <h5 class="card-title">5 tips</h5>
+          <p class="card-text">improve your overall health...</p>
+          <a href="https://www.genomicwellbeing.com/" class="btn btn-primary"
+            style="background-color: #63ada8;border-radius: 5px; box-shadow: 0px 3px 3px rgb(52, 58, 58);">read more</a>
+        </div>
+      </div>
+      <div class="card d-inline-block mb-3 m-2"
+        style="width: 18rem;border-radius: 5px; box-shadow: 0px 2px 3px rgb(80, 206, 206);">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTewUbGd5S5hzLepPVBMB_-4VRiFOifWfDy8A&usqp=CAU"
+          class="card-img-top" alt="..." style="height: 6cm; width: 6cm; ">
+        <div class="card-body">
+          <h5 class="card-title">Caloric Deficit</h5>
+          <p class="card-text">caloric deficit pros and cos...</p>
+          <a href="https://www.webmd.com/diet/calorie-deficit" class="btn btn-primary"
+            style="background-color: #63ada8; border-radius: 5px; box-shadow: 0px 3px 3px rgb(52, 58, 58);">read
+            more</a>
+        </div>
+      </div>
+      <div class="card d-inline-block mb-3 m-2"
+        style="width: 18rem;border-radius: 5px; box-shadow: 0px 2px 3px rgb(80, 206, 206);">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTii9zDAsf70sHEiwQ1rhfapYIstR3lwRJWnQ&usqp=CAU"
+          class="card-img-top" alt="..." style="height: 6cm; width: 6cm;">
+        <div class="card-body">
+          <h5 class="card-title">Gym ethics</h5>
+          <p class="card-text">workingout's do's and dont's...</p>
+          <a href="https://www.cnet.com/health/fitness/gym-etiquette-for-newbies-dont-break-these-10-important-rules/"
+            class="btn btn-primary"
+            style="background-color: #63ada8; border-radius: 5px; box-shadow: 0px 3px 3px rgb(52, 58, 58);">read
+            more</a>
+        </div>
+      </div>
+  </center>
+  <br><br><br>
+  <footer class=" text-black pt-5 pb-4">
+    <div class="container text-center text-md-left">
+      <div class="row text-center text-md-left">
+        <div class="col-md-3 col-lg col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold ">Shapeshifters.com</h5>
+          <p style="text-align: left;">If you have any questions, feedback, or suggestions, we'd love to hear from you.
+            Get in touch with us </p>
+        </div>
+
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto m-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-black">Contact</h5>
+          <p style="text-align: left;">
+            <i class="fas fa-home" style="margin-right: 8px;"></i> Mambaling, Cebu City, Philippines
+          </p>
+          <p style="text-align: left;">
+            <i class="fas fa-envelope" style="margin-right: 8px;;"></i> ShapeShifters@gmail.com
+          </p>
+          <p style="text-align: left;">
+            <i class="fas fa-phone" style="margin-right: 8px;"></i> +639163711952
+          </p>
+          <p style="text-align: left;">
+            <i class="fas fa-print" style="margin-right: 8px;"></i> +112-43554
+          </p>
+        </div>
+
+        <div class="col-md-4 col-lg col-xl-4 mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-black">Follow us</h5>
+          <ul>
+            <li class="list-inline-item">
+              <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-youtube"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-tiktok"></i></a>
+            </li>
+          </ul>
+        </div>
+        <hr class="mb-4">
+        <div class="text-center text-black">
+          <p> © 2023 Shapeshifters.com. All rights reserved.</p>
+        </div>
+
+      </div>
+      <script src="js/index.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://www.nutritionix.com/js/nutrition-label-widget.min.js"></script>
+
+  </footer>
+
+</body>
+
+</html>

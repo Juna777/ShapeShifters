@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShapeShifters</title>
-    <link rel="icon" type="image" href="img/logo.png">
-    <link rel="stylesheet" href="css/index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShapeShifters</title>
+  <link rel="icon" type="image" href="img/logo.png">
+  <link rel="stylesheet" href="css/index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="" width="70px" height="70px"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html"><b>Home</b></a>
+            <a class="nav-link" aria-current="page" href="index.html"><b>Home</b></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html"><b>About</b></a>
@@ -35,90 +41,217 @@
             <a class="nav-link" href="contact.html"><b>Contact Us</b></a>
           </li>
           <li>
-            <a class="nav-link" href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            <a class="nav-link" href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                <path
+                  d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
               </svg>
-              <p class="d-inline-block"  id="cartlength"></p>
-             </a>
+              <p class="d-inline-block" id="cartlength"></p>
+            </a>
           </li>
-          </ul>
-            <h6><a href="login.html">Log-in</a></h6>
-            <h6><a href="signup.html">Sign-up</a></h6>
-            
-          </div>
-    </div>
-</nav>
-      <br><br><br>
-      <center>
-        <section class="about container">
-          <h1>About Us</h1>
-          <p>Welcome to ShapeShifters, where your journey to a healthier and more vibrant you begins.</p>
-      
-          <h2>Our Mission</h2>
-          <p>At ShapeShifters, our mission is to provide individuals with the knowledge, tools, and support they need to transform their health and fitness. We are committed to offering personalized guidance, expert resources, and a supportive community to empower you on your wellness journey. We believe that everyone, regardless of their starting point, has the potential to achieve their fitness goals and lead a more fulfilling life.</p>
-      
-          <h2>Our Vision</h2>
-          <p>Our vision is a world where health and fitness are accessible to all. We envision a society where people of all backgrounds have the opportunity to lead happier, healthier, and more active lives. ShapeShifters strives to be a catalyst for this transformation, advocating for inclusivity, knowledge sharing, and the creation of a global community dedicated to well-being.</p>
-      
-          <h2>Meet Our Team</h2>
-          <p>Our dedicated team of fitness experts, nutritionists, and wellness enthusiasts is here to guide and support you on your journey. We are passionate about helping you achieve your goals and committed to delivering the best resources and experiences to enhance your well-being.</p>
-        </section>
-      
-      
-      </center>
+        </ul>
+        <h6><a href="login.html"><b>Log-in</b></a></h6>
+        <h6><a href="signup.html"><b>Sign-up</b></a></h6>
 
-      <footer class=" text-black pt-5 pb-4">
-        <div class="container text-center text-md-left">
-          <div class="row text-center text-md-left">
-            <div class="col-md-3 col-lg col-xl-3 mx-auto mt-3">
-              <h5 class="text-uppercase mb-4 font-weight-bold text-">Shapeshifters.com</h5>
-              <p>If you have any questions, feedback, or suggestions, we'd love to hear from you. Get in touch with us </p>
-            </div>
-      
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto m-3">
-                <h5 class="text-uppercase mb-4 font-weight-bold text-black">Contact</h5>
-                <p>
-                  <i class="fas fa-home" style="margin-right: 8px;"></i> Mambaling, Cebu City, Philippines
-                </p>
-                <p>
-                  <i class="fas fa-envelope" style="margin-right: 8px;"></i> ShapeShifters@gmail.com
-                </p>
-                <p>
-                  <i class="fas fa-phone" style="margin-right: 8px;"></i> +639163711952
-                </p>
-                <p>
-                  <i class="fas fa-print" style="margin-right: 8px;"></i> +112-43554
-                </p>
-              </div>
-              
-            <div class="col-md-4 col-lg col-xl-4 mt-3">
-              <h5 class="text-uppercase mb-4 font-weight-bold text-black">Follow us</h5>
-              <ul>
-                <li class="list-inline-item">
-                  <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-facebook"></i></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-instagram"></i></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-youtube"></i></a>
-                </li>
-                <li class="list-inline-item">
-                  <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-tiktok"></i></a>
-                </li>
-              </ul>
+      </div>
+    </div>
+  </nav>
+  <br><br>
+
+  <section class="about container">
+    <h1 style="text-align: center;">About Us</h1>
+    <p style="margin: 20px;text-align: justify;">Welcome to ShapeShifters, where your journey to a healthier and more
+      vibrant you begins! <br><br>
+      At ShapeShifters, we are proud to present a groundbreaking Health and Fitness Website that we firmly believe can
+      catalyze transformative change towards a better you. Our platform is more than just a website; it's a dynamic and
+      supportive community designed to revolutionize your approach to health and fitness.
+      <br><br>
+      In today's fast-paced world, maintaining optimal well-being can be challenging. That's why we have curated a
+      comprehensive online space that serves as your go-to resource for all things health and fitness. We believe in the
+      power of knowledge and personalized guidance, and our website is meticulously crafted to provide you with
+      expert-backed information, cutting-edge fitness techniques, and tailored strategies to help you achieve your
+      wellness goals.
+      <br><br>
+      What sets us apart is our unwavering commitment to your individual journey. We recognize that every person is
+      unique, and there is no one-size-fits-all solution to health and fitness. Our website is designed with your
+      diversity in mind, offering personalized fitness plans, expert nutritional guidance, and mental health resources
+      to address the multifaceted aspects of your well-being.
+      <br><br>
+      But ShapeShifters is more than just a repository of information; it's a vibrant community where your aspirations
+      are nurtured, and your achievements are celebrated. We foster an environment where encouragement and motivation
+      flow freely, and where setbacks are seen as opportunities for growth. Our community is a source of inspiration, a
+      place where you can connect with like-minded individuals who share your journey, understand your challenges, and
+      champion your successes.
+      <br><br>
+      In addition to our empowering community and wealth of knowledge, we are excited to introduce our nutritional shop,
+      where you can find a wide range of high-quality nutritional drinks and supplements to complement your fitness
+      journey. Our shop is curated with products that meet the highest standards of quality and efficacy, ensuring that
+      you have access to the best resources to support your health and fitness goals.
+      <br><br>
+      With our Health and Fitness Website and our exclusive nutritional shop, you have a powerful tool at your
+      fingertips - a tool that can empower you to make positive, lasting changes. Whether you're starting your fitness
+      journey or looking to enhance your existing routine, we are here to guide you every step of the way. Together,
+      let's embrace a healthier, happier future. Join us, and let's embark on this transformative adventure, because we
+      truly believe in the incredible potential within you."
+    </p>
+
+    <h2 style="text-align: center;">Our Mission</h2>
+    <p style="margin: 20px;text-align: justify;">At ShapeShifters, we stand firmly rooted in our mission to provide
+      individuals with not just information, but a holistic transformational experience for their health and fitness
+      journey. Our dedication goes beyond the ordinary; it's about equipping you with a wealth of knowledge,
+      cutting-edge tools, and unwavering support that acts as a compass guiding you toward optimal well-being.
+      <br><br>
+      In our vibrant community, we celebrate diversity and acknowledge that each person's journey is unique. That's why
+      our commitment to personalized guidance is unparalleled. Our expert resources are meticulously curated to cater to
+      all aspects of your health, encompassing not just physical fitness but also mental and emotional well-being. We
+      firmly believe that true health is a harmonious balance of body, mind, and spirit, and we are here to nurture that
+      balance.
+      <br><br>
+      Imagine a space where your aspirations are not just acknowledged but nurtured, where your dreams of a healthier,
+      happier life are not just supported but actively encouraged. At ShapeShifters, we foster a sense of belonging that
+      goes beyond the virtual realm. It's a supportive community where you're not alone in your journey - you're
+      surrounded by like-minded individuals who understand the challenges and victories that come with pursuing your
+      fitness goals.
+      <br><br>
+      Our belief in your potential knows no bounds. Regardless of where you start, we see the limitless possibilities
+      within you. It's not just about achieving your fitness goals; it's about embracing a lifestyle that leads to a
+      more fulfilling life. We are here to guide you, inspire you, and empower you to make transformative changes that
+      extend far beyond the physical realm.
+      <br><br>
+      Join us on this extraordinary journey of self-discovery and holistic wellness. Together, let's explore the depths
+      of your capabilities, overcome challenges, and celebrate every milestone, no matter how small. At ShapeShifters,
+      your journey to a healthier, happier you isn't just a mission; it's a shared adventure we embark upon with
+      boundless enthusiasm and unwavering belief in your incredible potential. Welcome to a world where your well-being
+      takes center stage, and your transformation is not just a goal but a magnificent, ongoing process.</p>
+
+    <h2 style="text-align: center;">Our Vision</h2>
+    <p style="margin: 20px;text-align: justify;">At ShapeShifters, our vision transcends boundaries; we envision a world
+      where health and fitness are not just aspirations but fundamental rights accessible to every individual,
+      regardless of their background or circumstances. We passionately believe in a society where everyone, irrespective
+      of their socioeconomic status, cultural differences, or geographical location, has the opportunity to lead lives
+      that are not just healthier but also happier and more active.
+      <br><br>
+      In our expansive vision, ShapeShifters stands as a beacon of change, a driving force that advocates for
+      inclusivity in the realm of health and fitness. We firmly assert that well-being should not be a privilege limited
+      to a select few but a birthright available to all. Our commitment to inclusivity goes beyond rhetoric; it's a
+      pledge to break down barriers, dismantle disparities, and create a level playing field where everyone can
+      participate in the journey towards better health.
+      <br><br>
+      Central to our vision is the concept of knowledge sharing as a transformative tool. We believe that by imparting
+      knowledge freely and equipping individuals with the information they need, we empower them to take charge of their
+      health. Through comprehensive resources, expert guidance, and cutting-edge insights, we aim to arm people with the
+      understanding required to make informed choices about their well-being. We envision a world where knowledge
+      becomes a bridge, connecting individuals to the vast ocean of possibilities that good health offers.
+      <br><br>
+      Furthermore, ShapeShifters is not merely an organization; it's a movement—a global community dedicated to the
+      pursuit of well-being. We believe in the power of unity, where people from diverse backgrounds come together with
+      a shared purpose: to uplift one another and collectively contribute to a healthier world. We advocate for the
+      creation of this global community where individuals inspire and support each other, transcending borders and
+      cultures, to foster a sense of camaraderie and belonging.
+      <br><br>
+      In our vision, ShapeShifters serves as a catalyst, sparking a transformation that ripples across societies,
+      breaking down barriers, and igniting a passion for healthier living. We strive not just for individual well-being
+      but for a collective shift in consciousness, where the importance of health is universally acknowledged and
+      actively pursued. Join us in this vision, where health is not a privilege but a shared journey, and together,
+      let's create a world where everyone has the opportunity to lead a happier, healthier, and more active life.</p>
+
+    <h2 style="text-align: center;">Meet Our Team</h2>
+    <p style="margin: 20px;text-align: justify;">Our dedicated team of fitness experts, nutritionists, and wellness
+      enthusiasts is here to guide and support you on your journey. We are passionate about helping you achieve your
+      goals and committed to delivering the best resources and experiences to enhance your well-being.</p>
+    <div class="row">
+      <div class="col-sm-4 mb-3 mb-sm-0">
+        <div>
+          <div class="card-body">
+            <img src="img/juna (2).jpg" alt="" width="100%"
+              style="border-radius: 10px;box-shadow: 2px 2px 2px rgb(80, 206, 206);">
+            <p class="card-text" style="text-align: justify;">"Physical fitness and mental health are interconnected.
+              Regular exercise releases endorphins, which are natural mood elevators, reducing stress and anxiety. A
+              strong body contributes to a strong mind, fostering mental resilience, self-esteem, and a positive outlook
+              on life. Together, let's embrace a healthier, happier future."<br>-Juna</p>
           </div>
-          <hr class="mb-4">
-          <div class="text-center text-black">
-            <p> © 2023 Shapeshifters.com. All rights reserved.</p>
-          </div>
-      
         </div>
-      
-      </footer>
+      </div>
+      <div class="col-sm-4">
+        <div>
+          <div class="card-body">
+            <img src="img/kar.jpg" width="100%" height="600px"
+              style="border-radius: 10px;box-shadow: 2px 2px 2px rgb(80, 206, 206);">
+            <p class="card-text" style="text-align: justify;">"Health and fitness play a vital role in disease
+              prevention. Engaging in regular physical activity and making nutritious dietary choices can lower the risk
+              of chronic diseases such as heart disease, diabetes, and certain types of cancer. This not only saves
+              lives but also reduces the burden on healthcare systems." <br> -Karl</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div>
+          <div class="card-body">
+            <img src="img/zed.jpg" width="100%" height="600px"
+              style="border-radius: 10px;box-shadow: 2px 2px 2px rgb(80, 206, 206);">
+            <p class="card-text" style="text-align: justify;"> "Prioritizing health and fitness is essential because it
+              directly contributes to an improved quality of life. Regular exercise and a balanced diet help maintain
+              physical and mental well-being, allowing individuals to enjoy life to the fullest, with increased energy,
+              vitality, and reduced risk of health issues." <br> -Zed</p>
+          </div>
+        </div>
+  </section>
+
+
+  <br><br>
+
+  <footer class=" text-black pt-5 pb-4">
+    <div class="container text-center text-md-left">
+      <div class="row text-center text-md-left">
+        <div class="col-md-3 col-lg col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-">Shapeshifters.com</h5>
+          <p>If you have any questions, feedback, or suggestions, we'd love to hear from you. Get in touch with us </p>
+        </div>
+
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto m-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-black">Contact</h5>
+          <p>
+            <i class="fas fa-home" style="margin-right: 8px;"></i> Mambaling, Cebu City, Philippines
+          </p>
+          <p>
+            <i class="fas fa-envelope" style="margin-right: 8px;"></i> ShapeShifters@gmail.com
+          </p>
+          <p>
+            <i class="fas fa-phone" style="margin-right: 8px;"></i> +639163711952
+          </p>
+          <p>
+            <i class="fas fa-print" style="margin-right: 8px;"></i> +112-43554
+          </p>
+        </div>
+
+        <div class="col-md-4 col-lg col-xl-4 mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold text-black">Follow us</h5>
+          <ul>
+            <li class="list-inline-item">
+              <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-youtube"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="" class="btn-floating btn-sm text-light"><i class="fab fa-tiktok"></i></a>
+            </li>
+          </ul>
+        </div>
+        <hr class="mb-4">
+        <div class="text-center text-black">
+          <p> © 2023 Shapeshifters.com. All rights reserved.</p>
+        </div>
+
+      </div>
+
+  </footer>
 </body>
 
 </html>

@@ -14,7 +14,7 @@ $(document).ready(function() {
             'fish': 40,
             'pork': 100,
             'chicken': 90
-            // Add more food items and calorie values as needed
+            
         };
 
 
